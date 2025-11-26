@@ -18,6 +18,9 @@ export default function NavBar() {
       <NavLink to="/players" className={link}>
         Players
       </NavLink>
+      <NavLink to="/top5" className={link}>
+        Top 5 List
+      </NavLink>
       <NavLink to="/standings" className={link}>
         Standings
       </NavLink>
