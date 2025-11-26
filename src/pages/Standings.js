@@ -1,7 +1,36 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import players from '../data/standings.json';
+import React from 'react';
+import standings from '../data/standings.json';
 
 export default function Standings() {
-  return <h1 className="text-center mt-5">This will be the standings page</h1>;
+  const { east, west } = standings;
+
+  return (
+    <div>
+      <h1>NBA Standings </h1>
+
+      <h2>Eastern Conference</h2>
+      <ol>
+        {east
+          .sort((a, b) => a.conferenceRank - b.conferenceRank)
+          .map((team) => (
+            <li key={team.teamId}>
+              {team.name} ({team.abbreviation}) — 
+              {team.wins}-{team.losses}
+            </li>
+          ))}
+      </ol>
+
+      <h2>Western Conference</h2>
+      <ol>
+        {west
+          .sort((a, b) => a.conferenceRank - b.conferenceRank)
+          .map((team) => (
+            <li key={team.teamId}>
+              {team.name} ({team.abbreviation}) — 
+              {team.wins}-{team.losses}
+            </li>
+          ))}
+      </ol>
+    </div>
+  );
 }

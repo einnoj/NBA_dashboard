@@ -5,9 +5,11 @@ I am using this project to practice React, JavaScript, and Git/GitHub.
 
 ## How to run the project
 1. Install dependencies:
+   npm install
 
 2. Start the development server:
-
+    npm start
+    
 ## Project folders
 - **src/** – React components and pages  
 - **public/** – public assets  
