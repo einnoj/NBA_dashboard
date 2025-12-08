@@ -5,10 +5,11 @@ import {
   CategoryScale,
   LinearScale,
   BarElement,
+  Tooltip,
   Legend,
 } from 'chart.js';
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 export default function TopPlayers({ playerA, playerB }) {
   if (!playerA || !playerB) {
@@ -33,13 +34,18 @@ export default function TopPlayers({ playerA, playerB }) {
 
   return (
     <div style={{ maxWidth: '700px', margin: '40px auto' }}>
-      <Bar 
+      <Bar
         data={data}
         options={{
-          
+          responsive: true,
           plugins: {
-            legend: {display: true},
-          }
+            legend: { display: true },
+            tooltip: { enabled: true },
+          },
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
         }}
       />
     </div>
