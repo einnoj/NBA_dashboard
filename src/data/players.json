@@ -13,7 +13,7 @@
       "fg3Pct": 0.375
     },
     "totalStats": {
-      "games": 76,
+      "games": 76,  
       "points": 2484.0,
       "rebounds": 379.0,
       "assists": 486.0,
@@ -706,7 +706,7 @@
   {
     "playerId": 1629029,
     "name": "Luka Don\u010di\u0107",
-    "team": "TOT",
+    "team": "DAL",
     "perGame": {
       "ppg": 28.16,
       "rpg": 8.18,

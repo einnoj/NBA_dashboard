@@ -3,15 +3,22 @@ import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
   const link = ({ isActive }) => 'nav-link' + (isActive ? ' active' : '');
-  const bar = {
+  const sidebar = {
     display: 'flex',
-    gap: '1rem',
+    flexDirection: 'column',
+    gap: '3rem',
     padding: '1rem',
-    borderBottom: '1px solid #ddd',
+    width: '150px',
+    height: '100vh',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    backgroundColor: '#f8f9fa',
+    borderRight: '1px solid #ddd',
   };
 
   return (
-    <nav style={bar}>
+    <nav style={sidebar}>
       <NavLink to="/home" className={link}>
         Home
       </NavLink>
